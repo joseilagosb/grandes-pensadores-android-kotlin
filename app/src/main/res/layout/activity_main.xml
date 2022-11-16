@@ -29,7 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/texto_bienvenida"
-            android:textSize="20sp"
+            android:textSize="16sp"
             android:textAlignment="center" />
     </androidx.cardview.widget.CardView>
 
@@ -41,7 +41,7 @@
         >
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
@@ -50,6 +50,8 @@
                 android:backgroundTint="@color/breaking_bad_quotes_button_background"
                 app:cardCornerRadius="20dp"
                 android:layout_marginBottom="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
                 >
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -80,6 +82,8 @@
                 android:backgroundTint="@color/kanye_west_quotes_button_background"
                 app:cardCornerRadius="20dp"
                 android:layout_marginBottom="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
                 >
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -107,8 +111,10 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/black"
+                android:backgroundTint="@color/cheer_up_quotes_button_background"
                 app:cardCornerRadius="20dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
                 >
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -120,19 +126,40 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_weight="0.1"
-                        android:background="@drawable/breaking_bad_quotes"/>
+                        android:background="@drawable/cheer_up_quotes"/>
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="0.9"
-                        android:text="@string/quotes_for_your_health_button"
+                        android:text="@string/cheer_up_quotes_button"
                         android:gravity="center|right"
                         android:paddingRight="20dp"
                         android:textSize="24dp"
-                        android:textColor="@color/breaking_bad_quotes_button_text" />
+                        android:textColor="@color/cheer_up_quotes_button_text" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
         </LinearLayout>
     </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:layout_marginRight="10dp"
+            android:gravity="center|start"
+            android:textColor="@color/white"
+            android:text="Si necesitas motivación extra, recuerda que puedes contactarte con los embajadores de la felicidad."/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:text="Ver más"/>
+    </LinearLayout>
   </LinearLayout>

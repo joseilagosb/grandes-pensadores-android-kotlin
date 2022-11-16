@@ -11,4 +11,6 @@
     <color name="breaking_bad_quotes_button_text">#008000</color>
     <color name="kanye_west_quotes_button_background">#cfb574</color>
     <color name="kanye_west_quotes_button_text">#000000</color>
+    <color name="cheer_up_quotes_button_background">#77cbed</color>
+    <color name="cheer_up_quotes_button_text">#000000</color>
 </resources>
