@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Grandes Pensadores App</string>
+    <string name="texto_bienvenida">Personas que marcaron a la humanidad. Bienvenido a #GrandesPensadores.</string>
+    <string name="breaking_bad_quotes_button">Frases de Breaking Bad</string>
+    <string name="kanye_west_quotes_button">Kanye West Special</string>
+    <string name="quotes_for_your_health_button">Por si tuviste un mal día</string>
+</resources>
