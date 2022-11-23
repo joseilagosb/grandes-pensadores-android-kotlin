@@ -1,3 +1,6 @@
+<!-- Aquí se encuentran todos los strings de nuestro proyecto Android -->
+<!-- Para llamarlos en nuestro activity.xml debemos usar la sintaxis @string/(NOMBRE_DEL_STRING)  -->
+
 <resources>
     <string name="app_name">Grandes Pensadores App</string>
     <string name="texto_bienvenida">Personas que marcaron a la humanidad. Bienvenido a #GrandesPensadores.</string>
