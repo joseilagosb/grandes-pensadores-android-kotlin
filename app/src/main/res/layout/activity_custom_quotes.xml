@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:weightSum="1"
+        android:layout_marginBottom="40dp"
         >
         <TextView
             android:layout_width="0dp"
@@ -26,31 +27,69 @@
             android:paddingRight="10dp"
             />
         <Button
+            android:id="@+id/new_quote_button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.3"
-            android:id="@+id/refresh_quote_button"
-            android:text="Nueva frase"
+            android:layout_gravity="center"
+            android:text="Otra frase!"
             />
     </LinearLayout>
 
-    <androidx.cardview.widget.CardView
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:cardCornerRadius="30dp"
-        android:backgroundTint="@color/cheer_up_quotes_button_background"
         >
-        <ImageView
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/kanye_west_quotes_card"
-            android:scaleType="fitXY"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="el pepe"
-
-            />
-    </androidx.cardview.widget.CardView>
+            app:cardCornerRadius="30dp"
+            android:backgroundTint="@color/cheer_up_quotes_button_background"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/placeholder_quotes_background"
+                android:scaleType="centerCrop"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="el pepe"
+                />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="40dp"
+            app:cardCornerRadius="10dp"
+            android:backgroundTint="#85FFFFFF"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="20dp"
+                >
+                <TextView
+                    android:id="@+id/quote_body_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:textSize="34dp"
+                    android:textStyle="italic"
+                    android:text="'AQUI VA LA FRASE'"
+                    />
+                <TextView
+                    android:id="@+id/quote_author_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="textEnd"
+                    android:textSize="24dp"
+                    android:textStyle="bold"
+                    android:text="-Mike Wazowski"
+                    />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
 </LinearLayout>
