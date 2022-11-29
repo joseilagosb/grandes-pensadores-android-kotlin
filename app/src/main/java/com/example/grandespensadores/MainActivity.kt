@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(newQuotesActivityIntent(this, "kanye_west"))
         }
         cheerUpQuotesButton.setOnClickListener {
-            startActivity(newQuotesActivityIntent(this, ""))
+            startActivity(newQuotesActivityIntent(this, "cheer_up"))
         }
     }
 

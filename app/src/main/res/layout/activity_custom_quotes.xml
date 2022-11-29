@@ -44,12 +44,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:cardCornerRadius="30dp"
-            android:backgroundTint="@color/cheer_up_quotes_button_background"
             >
             <ImageView
+                android:id="@+id/quote_card_image"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/placeholder_quotes_background"
+                android:src="@drawable/default_quotes_background"
                 android:scaleType="centerCrop"
                 />
             <TextView
@@ -63,7 +63,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="40dp"
             app:cardCornerRadius="10dp"
-            android:backgroundTint="#85FFFFFF"
+            android:backgroundTint="#90FFFFFF"
             >
             <LinearLayout
                 android:layout_width="match_parent"
@@ -76,7 +76,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textAlignment="center"
-                    android:textSize="34dp"
+                    android:textSize="28dp"
                     android:textStyle="italic"
                     android:text="'AQUI VA LA FRASE'"
                     />
@@ -85,7 +85,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textAlignment="textEnd"
-                    android:textSize="24dp"
+                    android:textSize="20dp"
                     android:textStyle="bold"
                     android:text="-Mike Wazowski"
                     />
