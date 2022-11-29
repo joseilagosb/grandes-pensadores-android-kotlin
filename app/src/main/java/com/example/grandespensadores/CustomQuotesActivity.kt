@@ -1,11 +1,15 @@
 package com.example.grandespensadores
 
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.cardview.widget.CardView
-import androidx.core.content.ContextCompat
+import androidx.core.view.isVisible
+import com.example.grandespensadores.api.KanyeWestAPIClient
+import kotlin.concurrent.thread
 
 private val SECTIONS = listOf<Section>(
     Section("default", "Con ustedes, Mike Wazowski", "", hasMultipleAuthors = false),
@@ -28,6 +32,7 @@ class CustomQuotesActivity : AppCompatActivity() {
 
         // Modificamos el titulo de la barra superior
         supportActionBar?.title = currentSection.name
+        supportActionBar?.setBackgroundDrawable(ColorDrawable(Color.parseColor("#cb2cf2")))
 
         // Modificamos el texto de nuestro quote
         val quoteBodyText = findViewById<TextView>(R.id.quote_body_text)
@@ -43,5 +48,26 @@ class CustomQuotesActivity : AppCompatActivity() {
             "cheer_up" -> R.drawable.cheer_up_quotes_background
             else -> R.drawable.default_quotes_background
         })
+
+        // Ocultamos el nombre del autor si la sección es de solo un autor
+        if (!currentSection.hasMultipleAuthors) {
+            quoteAuthorText.isVisible = false
+        }
+
+        var currentQuote: Quote? = null
+
+        thread {
+            val quote = KanyeWestAPIClient.service.getQuote()
+            val body = quote.execute().body()
+
+            if (body != null) {
+                currentQuote = Quote(body.quote, "Kanye West")
+                Log.d("CustomQuotesActivity", body.quote)
+
+                this@CustomQuotesActivity.runOnUiThread(java.lang.Runnable {
+                    quoteBodyText.text = currentQuote?.body
+                })
+            }
+        }
     }
 }

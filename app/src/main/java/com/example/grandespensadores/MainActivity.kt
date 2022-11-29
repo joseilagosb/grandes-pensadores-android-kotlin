@@ -2,6 +2,8 @@ package com.example.grandespensadores
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -14,6 +16,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        // Cambiamos el color de nuestra actionbar
+        supportActionBar?.setBackgroundDrawable(ColorDrawable(Color.parseColor("#7a5ef2")))
 
         val seeMoreButton = findViewById<Button>(R.id.see_more_button)
         val breakingBadQuotesButton = findViewById<CardView>(R.id.breaking_bad_quotes_button)

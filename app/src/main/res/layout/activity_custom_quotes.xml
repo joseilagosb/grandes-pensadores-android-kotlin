@@ -52,11 +52,6 @@
                 android:src="@drawable/default_quotes_background"
                 android:scaleType="centerCrop"
                 />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="el pepe"
-                />
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -76,7 +71,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textAlignment="center"
-                    android:textSize="28dp"
+                    android:textSize="22dp"
                     android:textStyle="italic"
                     android:text="'AQUI VA LA FRASE'"
                     />
@@ -85,7 +80,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textAlignment="textEnd"
-                    android:textSize="20dp"
+                    android:textSize="16dp"
                     android:textStyle="bold"
                     android:text="-Mike Wazowski"
                     />
