@@ -49,7 +49,7 @@ class CustomQuotesActivity : AppCompatActivity() {
             else -> R.drawable.default_quotes_background
         })
 
-        // Ocultamos el nombre del autor si la sección es de solo un autor
+        // Ocultamos el nombre del autor si la sección es de solo un autor (como en la sección Kanye West)
         if (!currentSection.hasMultipleAuthors) {
             quoteAuthorText.isVisible = false
         }
@@ -57,12 +57,11 @@ class CustomQuotesActivity : AppCompatActivity() {
         var currentQuote: Quote? = null
 
         thread {
-            val quote = KanyeWestAPIClient.service.getQuote()
-            val body = quote.execute().body()
+            val apiCall = KanyeWestAPIClient.service.getQuote()
+            val body = apiCall.execute().body()
 
             if (body != null) {
-                currentQuote = Quote(body.quote, "Kanye West")
-                Log.d("CustomQuotesActivity", body.quote)
+                currentQuote = Quote(body.quote)
 
                 this@CustomQuotesActivity.runOnUiThread(java.lang.Runnable {
                     quoteBodyText.text = currentQuote?.body
